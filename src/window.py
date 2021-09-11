@@ -19,18 +19,18 @@ pygame.display.set_caption("Jojo's Bizarre New Year")
 
 font = pygame.font.Font('font.ttf', 32)
 
+bg = pygame.image.load("assets/bg.png")
+
+#INSIDE OF THE GAME LOOP
+display_surface.blit(bg, (0, 0))
 
 # infinite loop
 while True:
 	countdown.delta_time()
 	text = font.render(countdown.remain_time(), True, BLACK, WHITE)
 
-
 	textRect = text.get_rect()
-
 	textRect.center = (X // 2, Y // 2)
-
-	display_surface.fill(WHITE)
 
 	display_surface.blit(text, textRect)
 
