@@ -21,25 +21,30 @@ font = pygame.font.Font('font.ttf', 32)
 
 bg = pygame.image.load("assets/bg.png")
 
-#INSIDE OF THE GAME LOOP
 display_surface.blit(bg, (0, 0))
 
-# infinite loop
-while True:
-	countdown.delta_time()
-	text = font.render(countdown.remain_time(), True, BLACK, WHITE)
+import webbrowser
 
-	textRect = text.get_rect()
-	textRect.center = (X // 2, Y // 2)
+def display():
+	# infinite loop
+	while True:
+		print(countdown.delta_time() + " | " + countdown.BTD_OP.strftime(countdown.format))
+		if countdown.delta_time() == countdown.BTD_OP.strftime(countdown.format):
+			webbrowser.open("https://www.youtube.com/watch?v=E3SLE19QLEs")
 
-	display_surface.blit(text, textRect)
+		text = font.render(countdown.remain_time(), True, BLACK, WHITE)
 
-	for event in pygame.event.get():
-		if event.type == pygame.QUIT:
+		textRect = text.get_rect()
+		textRect.center = (X // 2, Y // 2)
 
-			pygame.quit()
+		display_surface.blit(text, textRect)
 
-			quit()
+		for event in pygame.event.get():
+			if event.type == pygame.QUIT:
 
-	time.sleep(0.01)
-	pygame.display.update()
+				pygame.quit()
+
+				quit()
+
+		time.sleep(0.01)
+		pygame.display.update()

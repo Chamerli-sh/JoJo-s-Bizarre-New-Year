@@ -1,8 +1,7 @@
-import countdown
-import time
+import webbrowser
+from window import display
 
 if __name__ == "__main__":
-    while True:
-        print(countdown.delta_time())
-        time.sleep(0.01)
+    display()
+
 
