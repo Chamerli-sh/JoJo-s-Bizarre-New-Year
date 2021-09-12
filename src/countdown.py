@@ -9,8 +9,7 @@ now = datetime.datetime.now()
 
 
 NY = datetime.datetime(2022, month=1, day=1)
-BTD_OP = datetime.datetime(2021, month=9, day=12, hour=16, minute=12, second=16)
-
+BTD_OP = datetime.datetime(2021, month=9, day=30, hour=23, minute=58, second=16)
 
 
 def delta_time():
@@ -22,5 +21,4 @@ def remain_time():
 
     time_until_ny = NY - now
     
-
     return str(time_until_ny).split(".")[0]
