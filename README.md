@@ -2,6 +2,5 @@
 Korega Bisendo bakudan: Za Wardo
 
 ## Compile dependences:
-`Pygame`
-
+`Pygame`... 
 Thats all
