@@ -20,7 +20,7 @@ def delta_time():
 def remain_time():
     now = datetime.datetime.now()
 
-    # time_until_ny = NY - now
-    time_until_ny = BTD_OP - now
+    time_until_ny = NY - now
+    
 
     return str(time_until_ny).split(".")[0]
